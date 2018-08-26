@@ -18,3 +18,30 @@ The Architecture of the network is as follows
 
 Here is a pictorial representation of this network
 ![](VGG16_sem_segm.jpg)
+
+## Optimizer 
+
+The NN was trained using cross entropy loss function and Adam optimizer. L2 Regularization was employed.
+
+## Training
+
+The hyperparameters used for training are:
+
+* keep_prob: 0.5
+* learning_rate: 0.0001
+* epochs: 20
+* batch_size: 2
+
+I tried multiple learning rate values ranging from 0.00001 to 0.0001 and epochs ranging from 20 to 60 and batch_size ranging from 2 to 15 and I found that the above combination is working great. The average cross entropy loss quickly reduces at each epoch run reaching below 10% already by 4th epoch. Here is a plot of loss per each epoch. I was able to train this network with the above hyper parameters in less than 30 minutes on an AWS g3.4xlarge instance.
+
+![](Loss%20Per%20Epoch.jpg)
+
+## Result
+
+The project labels most pixels of roads close to the best solution. There are some problematic images though where using image augmentation helped to improve the classification to certain extent. The augmentation implementation is added to the ``helper.py`` function. Below are a few sample images from the output of the fully convolutional network.
+
+![](sample_img1.png)
+![](sample_img2.png)
+![](sample_img3.png)
+![](sample_img4.png)
+![](sample_img5.png)
