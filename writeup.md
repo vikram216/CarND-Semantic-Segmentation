@@ -38,7 +38,7 @@ I tried multiple learning rate values ranging from 0.00001 to 0.0001 and epochs 
 
 ## Result
 
-The project labels most pixels of roads close to the best solution. There are some problematic images though where using image augmentation helped to improve the classification to certain extent. The augmentation implementation is added to the ``helper.py`` function. Below are a few sample images from the output of the fully convolutional network.
+The project labels most pixels of roads close to the best solution. There are some problematic images though where using image augmentation helped to improve the classification to certain extent. The augmentation implementation is added to the ``helper.py`` function. Below are a few sample images from the output of the fully convolutional network. Output with all the images from the run is found [here](https://github.com/vikram216/CarND-Semantic-Segmentation/tree/master/1535203709.823805)
 
 ![](sample_img1.png)
 ![](sample_img2.png)
